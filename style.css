@@ -91,17 +91,31 @@ body {
 }
 
 #page {
-    padding: 1% 3% 1% 3%;
+    padding-right: 3%;
+    padding-left: 3%;
 }
 #page p, h1 {
-    margin-top: 5px;
-    margin-bottom: 15px;
-}
-#page p:last-child {
-    margin-bottom: 0;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 #page a {
     color: #FF5555;
+}
+.row img {
+    float: left;
+    max-width: 100%;
+    width: 350px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* clearfix, avoid the image being bigger than the container */
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .initial-text {
