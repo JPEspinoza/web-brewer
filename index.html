@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Default Website
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="site">
+            <div id="topbar">
+                <div id="left">
+                    <img src="assets/avi.jpg" alt="default image">
+                </div>
+                <div id="right">
+                    <h1>
+                        Default title
+                    </h1>
+                    <p>
+                    Default subtitle
+                    </p>
+                </div>
+            </div> <!-- finish top div -->
+            <div id="main">
+                <div id="navbar">
+                    <div class="nav-button" id="initial" onclick="activatePage(this, 'pages/nav-1.html')"> Nav 1 </div>
+                    <div class="nav-button" onclick="activatePage(this, 'pages/nav-2.html')"> Nav 2 </div>
+                    <div class="nav-button" onclick="activatePage(this, 'pages/nav-3.html')"> Nav 3 </div>
+                    <!-- change all the ids and links -->
+                </div>
+                <div id="page">
+                </div>
+            </div> <!-- finish div main -->
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
