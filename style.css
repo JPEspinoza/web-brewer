@@ -3,6 +3,7 @@
 html {
     font-family: "Lato", sans-serif;
     background-image: url('assets/bg.jpg');
+    background-size: cover;
     color: white;
 }
 /*background darken */
@@ -40,7 +41,6 @@ body {
     border-radius: 100%;
 }
 #right {
-    text-align: left;
 }
 /* title */
 #right h1 {
