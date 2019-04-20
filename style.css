@@ -49,6 +49,7 @@ body {
     font-size: 32pt;
     font-weight: 300;
     margin: 0;
+    padding: 0;
 }
 /*subtitle*/
 #right p {
