@@ -5,29 +5,36 @@
             Default Website
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta brewer-revision="1">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="site">
             <div id="topbar">
                 <div id="left">
+                    <label class="switch">
+                        <input type="checkbox" onclick="setLanguage()">
+                        <span class="slider round"> </span>
+                    </label>
+                </div>
+                <div id="center">
                     <img src="assets/avi.jpg" alt="default image">
                 </div>
                 <div id="right">
                     <h1> Default title </h1>
                     <p> Default subtitle </p>
                 </div>
-            </div> <!-- finish top div -->
+            </div>
             <div id="main">
                 <div id="navbar">
-                    <div class="nav-button" id="initial" onclick="activatePage(this, 'pages/nav-1.html')"> Nav 1 </div>
-                    <div class="nav-button" onclick="activatePage(this, 'pages/nav-2.html')"> Nav 2 </div>
-                    <div class="nav-button" onclick="activatePage(this, 'pages/nav-3.html')"> Nav 3 </div>
-                    <!-- change all the ids and links -->
+                    <div class="nav-button" id="initial" onclick="activatePage(this, 'nav-1.html')"></div>
+                    <div class="nav-button" onclick="activatePage(this, 'nav-2.html')"></div>
+                    <div class="nav-button" onclick="activatePage(this, 'nav-3.html')"></div>
                 </div>
                 <div id="page">
                 </div>
-            </div> <!-- finish div main -->
+            </div>
         </div>
         <script src="script.js"></script>
     </body>
