@@ -4,6 +4,7 @@ html {
     font-family: "Lato", sans-serif;
     background-image: url('assets/bg.jpg');
     background-size: cover;
+    background-attachment: fixed;
     color: white;
 }
 /*background darken */

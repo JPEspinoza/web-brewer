@@ -1,6 +1,7 @@
 const contentArea = document.getElementById("page");
 
 //name of navs in both languages
+//might not be good practice but it sure is easier than loading the dict through ajax
 const dict= {
     "es": {
         0: "Nav 1 es",
@@ -16,8 +17,6 @@ const dict= {
 
 var languages = ["en", "es"]; //first language is current
 
-console.log(dict["es"][1]);
-
 function setLanguage() 
 {
     //swap languages
@@ -25,13 +24,25 @@ function setLanguage()
     languages[0] = languages[1];
     languages[1] = temp;
 
+    //change buttons languages
     var divs = document.getElementsByClassName("nav-button");
 
+    //thanks god the buttons are in order
+    //remember to change the i max when adding tabs
     for(i = 0; i < 3; i++)
     {
         divs[i].innerHTML = dict[languages[0]][i];
     }
-    resetButtons();
+
+    //set default tab or reset buttons if there is no initial page
+    try
+    {
+        document.getElementById("initial").click();
+    }
+    catch(TypeError) //the getElement returns null
+    {
+        resetButtons();
+    }
 }
 
 function resetButtons() 
@@ -62,10 +73,11 @@ function activatePage(navbutt, source)
 {
     resetButtons();
     
-    var load = "pages/" + language + "/" + source + ".html";
+    var load = "pages/" + languages[0] + "/" + source;
+    console.log(load);
 
     navbutt.className += " active";
-    httpGet(source, setContent);
+    httpGet(load, setContent);
 }
 
 function setContent(payload) 
@@ -73,7 +85,6 @@ function setContent(payload)
     contentArea.innerHTML = payload;
 }
 
-//set default language
+//init page
+//set language and click default tab (or not)
 setLanguage();
-//default clicked element
-document.getElementById("initial").click();
