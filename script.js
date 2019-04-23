@@ -3,16 +3,19 @@ const contentArea = document.getElementById("page");
 //name of navs in both languages
 //might not be good practice but it sure is easier than loading the dict through ajax
 const dict= {
-    "es": {
-        0: "Nav 1 es",
-        1: "Nav 2 es",
-        2: "Nav 3 es"
-    },
-    "en": {
-        0: "Nav 1 en",
-        1: "Nav 2 en",
-        2: "Nav 3 en"
-    }
+    "es-nav-0": "Nav 0 es",
+    "es-nav-1": "Nav 1 es",
+    "es-nav-2": "Nav 2 es",
+
+    "en-nav-0": "Nav 0 en",
+    "en-nav-1": "Nav 1 en",
+    "en-nav-2": "Nav 2 en",
+
+    "es-title": "Title Es",
+    "en-title": "Title En",
+
+    "es-subtitle": "Subtitle Es",
+    "en-subtitle": "Subtitle En"
 }
 
 var languages = ["en", "es"]; //first language is current
@@ -25,14 +28,17 @@ function setLanguage()
     languages[1] = temp;
 
     //change buttons languages
-    var divs = document.getElementsByClassName("nav-button");
+    var navs = document.getElementsByClassName("nav-button");
 
     //thanks god the buttons are in order
     //remember to change the i max when adding tabs
     for(i = 0; i < 3; i++)
     {
-        divs[i].innerHTML = dict[languages[0]][i];
+        navs[i].innerHTML = dict[languages[0] + "-nav-" + i];
     }
+
+    document.getElementById("title").innerHTML = dict[languages[0] + "-title"];
+    document.getElementById("subtitle").innerHTML = dict[languages[0] + "-subtitle"];
 
     //set default tab or reset buttons if there is no initial page
     try
