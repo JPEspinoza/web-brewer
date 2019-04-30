@@ -6,7 +6,7 @@ const dict= {
     "es-nav-0": "Nav 0 es",
     "es-nav-1": "Nav 1 es",
     "es-nav-2": "Nav 2 es",
-
+    
     "en-nav-0": "Nav 0 en",
     "en-nav-1": "Nav 1 en",
     "en-nav-2": "Nav 2 en",
@@ -51,7 +51,7 @@ function setLanguage()
     }
 }
 
-function resetButtons() 
+function resetButtons()
 {
     var temp = document.getElementsByClassName("active");
     if(temp.length == 0)
