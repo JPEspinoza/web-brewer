@@ -29,25 +29,25 @@ body {
     text-align: center;
     margin-bottom: 0.5rem;
 }
-#left, #center, #right {
+#image, #name {
     display: inline-block;
     vertical-align: middle;
     padding: 1%;
 }
 /* make img rounded, still needs to have aspect ratio 1:1!! */
-#center img {
+#image img {
     max-height: 8rem;
     border-radius: 100%;
 }
 /* title */
-#right h1 {
+#name h1 {
     font-size: 3rem;
     font-weight: 300;
     margin: 0;
     padding: 0;
 }
 /*subtitle*/
-#right p {
+#name p {
     margin: 0;
 }
 
@@ -104,15 +104,6 @@ body {
 }
 #page img {
     width: 100%;
-}
-
-.row img {
-    float: left;
-    width: 100%;
-    max-width: 20rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
 }
 
 /* clearfix, avoid the image being bigger than the container */

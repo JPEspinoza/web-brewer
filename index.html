@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Default Website
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8">
-        <meta brewer-revision="1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div id="site">
-            <div id="topbar">
-                <div id="left">
-                    <label class="switch">
-                        <input type="checkbox" onclick="setLanguage()">
-                        <span class="slider round"> </span>
-                    </label>
-                </div>
-                <div id="center">
-                    <img src="assets/avi.jpg" alt="default image">
-                </div>
-                <div id="right">
-                    <h1 id="title"></h1>
-                    <p id="subtitle"></p>
-                </div>
+
+<head>
+    <title>
+        Default Website
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta brewer-revision="1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="site">
+        <div id="topbar">
+            <div id="image">
+                <img src="assets/avi.jpg" alt="default image">
             </div>
-            <div id="main">
-                <div id="navbar">
-                    <div class="nav-button" id="initial" onclick="activatePage(this, 'nav-1.html')"></div>
-                    <div class="nav-button" onclick="activatePage(this, 'nav-2.html')"></div>
-                    <div class="nav-button" onclick="activatePage(this, 'nav-3.html')"></div>
-                </div>
-                <div id="page">
-                </div>
+            <div id="name">
+                <h1 id="title"> Title </h1>
+                <p id="subtitle"> Subtitle </p>
             </div>
         </div>
-        <script src="script.js"></script>
-    </body>
+        <div id="main">
+            <div id="navbar">
+                <div class="nav-button initial" onclick="load(this, 'nav-1.html')"> About </div>
+                <div class="nav-button" onclick="load(this, 'nav-2.html')"> Contact </div>
+                <div class="nav-button" onclick="load(this, 'nav-3.html')"> Galery </div>
+            </div>
+            <div id="page">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
 </html>
